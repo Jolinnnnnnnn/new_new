@@ -1,0 +1,62 @@
+:root {
+    --white-color: #FFFFFF;
+    --black-color: #161C26;
+    --light-blue-color:#4185F2;
+    --gray-color: #808892;
+    --dark-gray-color: #8291A9;
+    --light-gray-color: #8191A9;
+    --more-dark-gray-color: #4B596A;
+    --bright-blue-color: #4286F3;
+    --black-blue-color: #19284B;
+    --left-corner-blue-color: #0D54A0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 2200px;
+    margin: 0 auto;
+    background-color: var(--black-color);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.topbtn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color:var(--white-color);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative; /* 确保父元素是相对定位 */
+}
+
+.topbtn.middle {
+    background-color: var(--bright-blue-color);
+}
+
+.topbtn.side {
+    background-color: var(--black-blue-color);
+}
+
+.topbtn.icon::before{
+    content: url('images/形状 1552 拷贝.png');
+    position: absolute;
+    top: -6px; /* 向上调整,数值为正数时向下调整 */
+    right: 2px; /* 向左调整，数值为正数时向右调整 */
+    /*transform: rotate(-45deg);  逆时针旋转 45 度（可选） */
+}
