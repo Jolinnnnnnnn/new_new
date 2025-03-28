@@ -1,7 +1,7 @@
 :root {
     --white-color: #FFFFFF;
     --black-color: #161C26;
-    --light-blue-color:#4185F2;
+    --light-blue-color: #4185F2;
     --gray-color: #808892;
     --dark-gray-color: #8291A9;
     --light-gray-color: #8191A9;
@@ -13,7 +13,7 @@
 
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
 
@@ -22,13 +22,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.wrapper{
+.wrapper {
     width: 100%;
     max-width: 2200px;
     margin: 0 auto;
     background-color: var(--black-color);
 }
-.nav{
+
+.nav {
     display: flex;
     justify-content: space-between;
 }
@@ -37,12 +38,13 @@ body {
 .topbtn {
     padding: 10px 20px;
     border-radius: 5px;
-    color:var(--white-color);
+    color: var(--white-color);
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    position: relative; /* 确保父元素是相对定位 */
+    position: relative;
+    /* 确保父元素是相对定位 */
 }
 
 .topbtn.middle {
@@ -53,10 +55,49 @@ body {
     background-color: var(--black-blue-color);
 }
 
-.topbtn.icon::before{
+.topbtn.icon::before {
     content: url('images/形状 1552 拷贝.png');
-    position: absolute;/*绝对定位*/
-    top: -6px; /* 向上调整,数值为正数时向下调整 */
-    right: 2px; /* 向左调整，数值为正数时向右调整 */
+    position: absolute;
+    /*绝对定位*/
+    top: -6px;
+    /* 向上调整,数值为正数时向下调整 */
+    right: 2px;
+    /* 向左调整，数值为正数时向右调整 */
     /*transform: rotate(-45deg);  逆时针旋转 45 度（可选） */
+}
+
+.font {
+    width: 60px;
+    height: 15px;
+    font-family: SourceHanSansSC;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFFFFF;
+    display: flex;
+}
+
+
+.top-menu div{
+    /* 内边距：上下10px，左右20px */
+    padding: 10px 20px;
+
+    /* 圆角效果，所有角都是5px */
+    border-radius: 5px;
+
+    /* 文字颜色使用CSS变量，方便统一管理 */
+    color: var(--white-color);
+
+    /* 设置为行内块级元素，使元素既能并排显示，又能设置宽高 */
+    display: inline-block;
+
+    /* 文字样式设置 */
+    font-size: 16px;          /* 字体大小 */
+    font-weight: normal;       /* 字体正常*/
+    text-decoration: none;    /* 移除下划线 */
+
+    /* 设置相对定位，为可能的绝对定位子元素提供参考点 */
+    position: relative;
+
+    /* 背景颜色设置为灰蓝色 */
+    background-color: #8191A9;
 }
