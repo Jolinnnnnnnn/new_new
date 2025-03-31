@@ -13,9 +13,7 @@
 
 *,
 *::before,
-*::after {
-    box-sizing: border-box;
-}
+*::after
 
 body {
     margin: 0;
@@ -74,12 +72,13 @@ body {
     font-size: 15px;
     color: #FFFFFF;
     display: flex;
+    flex:1;
 }
 
 
 .top-menu div{
     /* 内边距：上下10px，左右20px */
-    padding: 10px 20px;
+    padding: 8px 16px;
 
     /* 圆角效果，所有角都是5px */
     border-radius: 5px;
@@ -91,7 +90,7 @@ body {
     display: inline-block;
 
     /* 文字样式设置 */
-    font-size: 16px;          /* 字体大小 */
+    font-size: 14px;          /* 字体大小 */
     font-weight: normal;       /* 字体正常*/
     text-decoration: none;    /* 移除下划线 */
 
@@ -100,4 +99,103 @@ body {
 
     /* 背景颜色设置为灰蓝色 */
     background-color: #8191A9;
+
+    
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* 按钮之间的间距 */
+} 
+
+.top-menu:hover {
+    background-color: #2980b9;
+}
+
+.top-menu.search::before{
+    content: url('images/search.png');
+    position: absolute;
+    top: -1px;
+    right: 2px;
+
+}
+
+.top-menu.reset::before{
+    content: url('images/reset.png');
+    position: absolute;
+    top: -1px;
+    right: 2px;
+}
+
+.top-menu.import::before{
+    content: url('images/import.png');
+    position: absolute;
+    top: -1px;
+    right: 2px;
+}
+
+.top-menu.export::before{
+    content: url('images/export.png');
+    position: absolute;
+    top: -1px;
+    right: 2px;
+}
+
+.top-menu.add::before{
+    content: url('images/add.png');
+    position: absolute;
+    top: -1px;
+    right: 2px;
+} 
+
+.left-menu {
+    width: 200px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+}
+/* 当屏幕宽度大于768px时 */
+@media (min-width: 768px) {
+    .left-menu {
+        width: 250px; /* 增加宽度 */
+    }
+}
+.left-menu div {
+    padding: 10px;
+    cursor: pointer;
+}
+.left-menu div:hover {
+    background-color: #34495e;
+}
+
+.dropdown-meau{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+}
+.menu-item{
+    text-decoration: none;
+}
+.dropdown-menu::after{
+    content: url('images/uparrow.png');
+    position: absolute;
+    top: -1px;
+    right: 2px;
+}
+/*hide nested ul by default*/
+.menu-item{
+    display: block;
+    position:absolute;
+}
+
+ul li:hover{
+    cursor: pointer;
+    background-color: #4286F3;
+    color: white;
+}
+ul li:hover{
+    color:white;
 }

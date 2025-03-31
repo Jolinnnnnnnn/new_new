@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
 
 <body>
     <div class="wrapper">
@@ -24,10 +23,20 @@
         </header>
 
         <div class="main">
-            <div class="left-meau">
-                <img src="images/侧边菜单栏.png" alt="logo">
-            </div>
-            <div class="right-chart">
+            <ul class="left-meau">
+                <li>首页</li>
+                <li>工作台</li>
+                <li>大屏显示</li>
+                <ul class="dropdown-menu">基础数据<i class="fas fa-angle-down"></i>
+                    <li><a href="#" class="menu-item">管理单元</a></li>
+                    <li><a href="#" class="menu-item">管理编码</a></li>
+                    <li><a href="#" class="menu-item">管理设备</a></li>
+                    <li><a href="#" class="menu-item">岗位管理</a></li>
+                </ul>
+            </ul>
+
+
+           <div class="right-chart">
                 <a href="#" class="topbtn side icon">工作台</a>
                 <!--注意命名方式，css文件中写法为.topbtn和.topbtn.side -->
                 <a href="#" class="topbtn middle icon">设备管理</a>
@@ -36,19 +45,48 @@
 
                     <head>设备管理</head>
                 </div>
-                <div class="top-meau">
-                    <div>请选择管理单元</div>
-                    <div>请选择设备系统分类</div>
-                    <div>请输入设备名称</div>
-                    <div>请输入设备编码</div>
+                <div class="top-menu option">
+                    <form action="/" method="post">
+                        <div class="form-group">
+                            <input type="text" name="管理单元" placeholder="请选择管理单元">
+                            <select name="管理单元">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
 
+                        <div class="top-menu option">
+                            <input type="text" name="设备系统分类" placeholder="请选择设备系统分类">
+                            <select name="设备系统分类">
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+
+                        <div class="top-menu text">
+                            <input type="text" name="设备名称" placeholder="请输入设备名称">
+                        </div>
+
+                        <div class="top-menu text">
+                            <input type="text" name="设备编码" placeholder="请输入设备编码">
+                        </div>
+
+                        <div class="top-menu search">查询</div>
+                        <div class="top-menu reset">重置</div>
+                        <div class="top-menu">设备覆盖率</div>
+                        <div class="top-menu">下载模板</div>
+                        <div class="top-menu import">导入</div>
+                        <div class="top-menu export">导出</div>
+                        <div class="top-menu add">新增</div>
+
+
+                    </form>
                 </div>
 
-
-
-                <img src="images/组 6.png" alt="logo">
+               <!-- <img src="images/组 6.png" alt="logo">-->
             </div>
-        </div>
     </div>
 
 
@@ -62,8 +100,8 @@
     }
 
     .left-meau {
-        width: 200px;
-        height: 100%;
+        color:antiquewhite;
+
     }
 
     .right-chart {
